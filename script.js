@@ -9,9 +9,13 @@ function getComputerChoice()
     {
         return 'Rock';
     }
+    else if (rand === 2)
+    {
+        return 'Paper';
+    }
     else
     {
-        return rand;
+        return 'Scissors';
     }
 }
 
@@ -19,5 +23,5 @@ let choice;
 for (let i = 0; i < 5; i++)
 {
     choice = getComputerChoice();
-    console.log(typeof choice);
+    console.log(choice);
 }
