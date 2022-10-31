@@ -19,9 +19,4 @@ function getComputerChoice()
     }
 }
 
-let choice;
-for (let i = 0; i < 5; i++)
-{
-    choice = getComputerChoice();
-    console.log(choice);
-}
+const computerChoice = getComputerChoice();
