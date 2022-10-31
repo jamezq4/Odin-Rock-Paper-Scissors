@@ -21,21 +21,30 @@ function getComputerChoice()
 
 function playRound(playerSelection, computerSelection)
 {
-    //Rock beats scissors,
+    //ROCK BEATS SCISSORS,
     //If player chose rock, and computer chose scissors...
     if (playerSelection === 'ROCK' && computerSelection == 'SCISSORS')
     {
         return "You win!, rock beats scissors";
     }
+    //if computer chose rock and player chose scissors...
     else if (computerSelection === 'ROCK' && playerSelection == 'SCISSORS')
     {
         return "You lose!, rock beats scissors";
     }
+
+    //SCISSORS BEATS PAPER
+    //if player chose scissors and computer chose paper...
+    if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
+    {
+        return "You win! Scissors beats paper";
+    }
+
     
 
 
 
-    //Scissors beats paper
+    
 
     //Paper beats rock
 
