@@ -21,7 +21,18 @@ function getComputerChoice()
 
 function playRound(playerSelection, computerSelection)
 {
-    //Rock beats scissors
+    //Rock beats scissors,
+    //If player chose rock, and computer chose scissors...
+    if (playerSelection === 'ROCK' && computerSelection == 'SCISSORS')
+    {
+        return "You win!, rock beats scissors";
+    }
+    else
+    {
+        return "Sorry you lost";
+    }
+    
+
 
 
     //Scissors beats paper
@@ -30,12 +41,9 @@ function playRound(playerSelection, computerSelection)
 
     //if theyre equal to each other return a tie
 
-
-    console.log(playerSelection);
-    console.log(computerSelection);
 }
 
 const computerSelection = getComputerChoice();
 const playerSelection = "RocK";
 
-playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase());
+console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
