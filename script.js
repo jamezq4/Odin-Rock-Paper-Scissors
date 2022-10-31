@@ -19,4 +19,23 @@ function getComputerChoice()
     }
 }
 
-const computerChoice = getComputerChoice();
+function playRound(playerSelection, computerSelection)
+{
+    //Rock beats scissors
+
+
+    //Scissors beats paper
+
+    //Paper beats rock
+
+    //if theyre equal to each other return a tie
+
+
+    console.log(playerSelection);
+    console.log(computerSelection);
+}
+
+const computerSelection = getComputerChoice();
+const playerSelection = "RocK";
+
+playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase());
