@@ -27,9 +27,9 @@ function playRound(playerSelection, computerSelection)
     {
         return "You win!, rock beats scissors";
     }
-    else
+    else if (computerSelection === 'ROCK' && playerSelection == 'SCISSORS')
     {
-        return "Sorry you lost";
+        return "You lose!, rock beats scissors";
     }
     
 
@@ -44,6 +44,6 @@ function playRound(playerSelection, computerSelection)
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "RocK";
+const playerSelection = "scissors";
 
 console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
