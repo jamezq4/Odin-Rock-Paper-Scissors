@@ -57,6 +57,13 @@ function playRound(playerSelection, computerSelection)
         return "You lose!, paper beats rock";
     }
 
+
+    //TIE
+    if (playerSelection === computerSelection)
+    {
+        return "Its a tie!, try again";
+    }
+
     
 
 
