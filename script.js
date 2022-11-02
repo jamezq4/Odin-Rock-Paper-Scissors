@@ -52,7 +52,10 @@ function playRound(playerSelection, computerSelection)
         return "You win!, paper beats rock.";
     }
 
-    
+    else if (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+    {
+        return "You lose!, paper beats rock";
+    }
 
     
 
@@ -67,6 +70,6 @@ function playRound(playerSelection, computerSelection)
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "paper";
+const playerSelection = "rock";
 
 console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
