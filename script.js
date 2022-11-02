@@ -30,31 +30,31 @@ function playRound(playerSelection, computerSelection)
     //if computer chose rock and player chose scissors...
     else if (computerSelection === 'ROCK' && playerSelection == 'SCISSORS')
     {
-        return "You lose!, rock beats scissors";
+        return 2;
     }
 
     //SCISSORS BEATS PAPER
     //if player chose scissors and computer chose paper...
     if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
     {
-        return "You win! Scissors beats paper";
+        return 1;
     }
 
     else if (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
     {
-        return "You lose, Scissors beats paper";
+        return 2;
     }
 
     //PAPER BEATS ROCK
     //if player chooses paper and computer chooses rock.
     if (playerSelection === 'PAPER' && computerSelection === 'ROCK')
     {
-        return "You win!, paper beats rock.";
+        return 1;
     }
 
     else if (computerSelection === 'PAPER' && playerSelection === 'ROCK')
     {
-        return "You lose!, paper beats rock";
+        return 2;
     }
 
 
