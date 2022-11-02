@@ -69,11 +69,23 @@ function playRound(playerSelection, computerSelection)
 function game()
 {
     let round_result;
+    let playerSelection;
     //call playRound function five times, 5 round game
     for (let i = 0; i < 5; i++)
     {
         //getting player and computer selection
-        const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+        
+        //let playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+        while (true)
+        {
+            playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+
+            if (playerSelection === 'ROCK' || playerSelection === 'PAPER' || playerSelection === 'SCISSORS')
+            {
+                break;
+            }
+        }
+        //const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
         const computerSelection = getComputerChoice().toUpperCase();
 
         round_result = playRound(playerSelection, computerSelection);
