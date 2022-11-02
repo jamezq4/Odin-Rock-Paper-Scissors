@@ -40,6 +40,11 @@ function playRound(playerSelection, computerSelection)
         return "You win! Scissors beats paper";
     }
 
+    else if (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
+    {
+        return "You lose, Scissors beats paper"
+    }
+
     
 
 
@@ -53,6 +58,6 @@ function playRound(playerSelection, computerSelection)
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "scissors";
+const playerSelection = "paper";
 
 console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
