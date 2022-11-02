@@ -75,6 +75,8 @@ function game()
         //getting player and computer selection
         const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
         const computerSelection = getComputerChoice().toUpperCase();
+
+        console.log(playRound(playerSelection, computerSelection));
         
     }
 
