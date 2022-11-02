@@ -64,19 +64,24 @@ function playRound(playerSelection, computerSelection)
         return "Its a tie!, try again";
     }
 
-    
-
-
-
-    
-
-    //Paper beats rock
-
-    //if theyre equal to each other return a tie
-
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = "rock";
+function game()
+{
+    
+    //call playRound function five times, 5 round game
+    for (let i = 0; i < 5; i++)
+    {
+        const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+    }
 
-console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
+
+    //outside for loop, now we should display the winner of the match.
+    //Probably should keep a win counter for both the player and the computer
+}
+
+game();
+//const computerSelection = getComputerChoice();
+//const playerSelection = "rock";
+
+//console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
