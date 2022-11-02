@@ -25,7 +25,7 @@ function playRound(playerSelection, computerSelection)
     //If player chose rock, and computer chose scissors...
     if (playerSelection === 'ROCK' && computerSelection == 'SCISSORS')
     {
-        return "You win!, rock beats scissors";
+        return 1;
     }
     //if computer chose rock and player chose scissors...
     else if (computerSelection === 'ROCK' && playerSelection == 'SCISSORS')
@@ -68,7 +68,7 @@ function playRound(playerSelection, computerSelection)
 
 function game()
 {
-
+    let round_result;
     //call playRound function five times, 5 round game
     for (let i = 0; i < 5; i++)
     {
@@ -76,7 +76,8 @@ function game()
         const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
         const computerSelection = getComputerChoice().toUpperCase();
 
-        console.log(playRound(playerSelection, computerSelection));
+        round_result = playRound(playerSelection, computerSelection);
+        console.log(round_result);
         
     }
 
