@@ -89,7 +89,16 @@ function game()
         const computerSelection = getComputerChoice().toUpperCase();
 
         round_result = playRound(playerSelection, computerSelection);
-        console.log(round_result);
+
+        if (round_result === 1)
+        {
+            console.log(`You Win!, ${playerSelection.toLowerCase()} beats ${computerSelection.toLowerCase()}`);
+        }
+        else
+        {
+            console.log(round_result);
+        }
+        //console.log(round_result);
         
     }
 
