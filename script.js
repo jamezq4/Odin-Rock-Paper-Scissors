@@ -94,6 +94,10 @@ function game()
         {
             console.log(`You Win!, ${playerSelection.toLowerCase()} beats ${computerSelection.toLowerCase()}`);
         }
+        else if (round_result === 2)
+        {
+            console.log(`You lose... ${computerSelection.toLowerCase()} beats ${playerSelection.toLowerCase()}`);
+        }
         else
         {
             console.log(round_result);
