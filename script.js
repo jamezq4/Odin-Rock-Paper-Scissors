@@ -112,8 +112,22 @@ function game()
         
     }
 
-    console.log(playerRoundsWon);
-    console.log(computerRoundsWon);
+    if (playerRoundsWon > computerRoundsWon)
+    {
+        console.log("You won the game! Congratulations!");
+    } 
+    else if (playerRoundsWon === computerRoundsWon)
+    {
+        console.log("The result is a tie");
+    }
+    else
+    {
+        console.log("You lost the game...");
+    }
+
+
+    //console.log(playerRoundsWon);
+    //console.log(computerRoundsWon);
 
 
     //outside for loop, now we should display the winner of the match.
