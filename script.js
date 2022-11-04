@@ -70,6 +70,11 @@ function game()
 {
     let round_result;
     let playerSelection;
+
+    let playerRoundsWon = 0;
+    let computerRoundsWon = 0;
+
+
     //call playRound function five times, 5 round game
     for (let i = 0; i < 5; i++)
     {
@@ -92,19 +97,23 @@ function game()
 
         if (round_result === 1)
         {
+            playerRoundsWon++;
             console.log(`You Win!, ${playerSelection.toLowerCase()} beats ${computerSelection.toLowerCase()}`);
         }
         else if (round_result === 2)
         {
+            computerRoundsWon++;
             console.log(`You lose... ${computerSelection.toLowerCase()} beats ${playerSelection.toLowerCase()}`);
         }
         else
         {
             console.log(round_result);
         }
-        //console.log(round_result);
         
     }
+
+    console.log(playerRoundsWon);
+    console.log(computerRoundsWon);
 
 
     //outside for loop, now we should display the winner of the match.
