@@ -109,6 +109,11 @@ function game()
         {
             console.log(round_result);
         }
+
+        //if (playerRoundsWon === 3 || computerRoundsWon === 3)
+        //{
+         //   break;
+        //}
         
     }
 
