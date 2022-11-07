@@ -31,6 +31,18 @@ function rockScissorCase(p, c)
     }
 }
 
+function scissorPaperCase(p, c)
+{
+    if (p === 'SCISSORS')
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
+}
+
 function playRound(playerSelection, computerSelection)
 {
     let roundCase;
@@ -40,43 +52,14 @@ function playRound(playerSelection, computerSelection)
         roundCase = rockScissorCase(playerSelection, computerSelection);
         return roundCase;
     }
+    else if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') || (computerSelection === 'SCISSORS' && playerSelection == 'PAPER'))
+    {
+        roundCase = scissorPaperCase(playerSelection, computerSelection);
+        return roundCase;
+    }
     return "Not yet";
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     //if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')
     //{
       //  return 1;
