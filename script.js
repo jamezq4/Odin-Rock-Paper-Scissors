@@ -19,50 +19,104 @@ function getComputerChoice()
     }
 }
 
-function playRound(playerSelection, computerSelection)
+function rockScissorCase(p, c)
 {
-    //ROCK BEATS SCISSORS,
-    //If player chose rock, and computer chose scissors...
-    if (playerSelection === 'ROCK' && computerSelection == 'SCISSORS')
+    if (p === 'ROCK')
     {
         return 1;
     }
-    //if computer chose rock and player chose scissors...
-    else if (computerSelection === 'ROCK' && playerSelection == 'SCISSORS')
+    else
     {
         return 2;
     }
+}
+
+function playRound(playerSelection, computerSelection)
+{
+    let roundCase;
+
+    if ((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (computerSelection === 'ROCK' && playerSelection === 'SCISSORS'))
+    {
+        roundCase = rockScissorCase(playerSelection, computerSelection);
+        return roundCase;
+    }
+    return "Not yet";
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')
+    //{
+      //  return 1;
+   // }
+    //if computer chose rock and player chose scissors...
+   // else if (computerSelection === 'ROCK' && playerSelection === 'SCISSORS')
+    //{
+      //  return 2;
+   // }
 
     //SCISSORS BEATS PAPER
     //if player chose scissors and computer chose paper...
-    if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
-    {
-        return 1;
-    }
+    //if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER')
+    //{
+      //  return 1;
+    //}
 
-    else if (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
-    {
-        return 2;
-    }
+    //else if (computerSelection === 'SCISSORS' && playerSelection === 'PAPER')
+    //{
+      //  return 2;
+    //}
 
     //PAPER BEATS ROCK
     //if player chooses paper and computer chooses rock.
-    if (playerSelection === 'PAPER' && computerSelection === 'ROCK')
-    {
-        return 1;
-    }
+    //if (playerSelection === 'PAPER' && computerSelection === 'ROCK')
+    //{
+      //  return 1;
+    //}
 
-    else if (computerSelection === 'PAPER' && playerSelection === 'ROCK')
-    {
-        return 2;
-    }
+    //else if (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+    //{
+      //  return 2;
+    //}
 
 
     //TIE
-    if (playerSelection === computerSelection)
-    {
-        return "Its a tie!, try again";
-    }
+    //if (playerSelection === computerSelection)
+    //{
+      //  return "Its a tie!, try again";
+    //}
 
 }
 
@@ -90,7 +144,6 @@ function game()
                 break;
             }
         }
-        //const playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
         const computerSelection = getComputerChoice().toUpperCase();
 
         round_result = playRound(playerSelection, computerSelection);
@@ -110,9 +163,14 @@ function game()
             console.log(round_result);
         }
 
-        //if (playerRoundsWon === 3 || computerRoundsWon === 3)
+
+        //if (playerRoundsWon === 3)
         //{
-         //   break;
+            //break;
+        //}
+        //else if (computerRoundsWon === 3)
+        //{
+            //break;
         //}
         
     }
@@ -130,17 +188,7 @@ function game()
         console.log("You lost the game...");
     }
 
-
-    //console.log(playerRoundsWon);
-    //console.log(computerRoundsWon);
-
-
-    //outside for loop, now we should display the winner of the match.
-    //Probably should keep a win counter for both the player and the computer
 }
 
 game();
-//const computerSelection = getComputerChoice();
-//const playerSelection = "rock";
 
-//console.log(playRound(playerSelection.toUpperCase(), computerSelection.toUpperCase()));
