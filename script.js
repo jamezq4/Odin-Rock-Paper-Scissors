@@ -43,11 +43,27 @@ function scissorPaperCase(p, c)
     }
 }
 
+function paperRockCase(p, c)
+{
+    if (p === 'PAPER')
+    {
+        return 1;
+    }
+    else
+    {
+        return 2;
+    }
+}
+
 function playRound(playerSelection, computerSelection)
 {
     let roundCase;
+    if (playerSelection === computerSelection)
+    {
+        return "It's a tie!, try again.";
+    }
 
-    if ((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (computerSelection === 'ROCK' && playerSelection === 'SCISSORS'))
+    else if ((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (computerSelection === 'ROCK' && playerSelection === 'SCISSORS'))
     {
         roundCase = rockScissorCase(playerSelection, computerSelection);
         return roundCase;
@@ -57,7 +73,11 @@ function playRound(playerSelection, computerSelection)
         roundCase = scissorPaperCase(playerSelection, computerSelection);
         return roundCase;
     }
-    return "Not yet";
+    else
+    {
+        roundCase = paperRockCase(playerSelection, computerSelection);
+        return roundCase;
+    }
     
 
     //if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')
