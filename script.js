@@ -1,23 +1,23 @@
-//function getComputerChoice()
-//{
+function getComputerChoice()
+{
 
     //code that gives a random number between 1 and 3
-    //let rand = Math.floor(Math.random() * 3) + 1;
+    let rand = Math.floor(Math.random() * 3) + 1;
 
     //deciding whether to return 'Rock', 'Paper', or Scissors'
-    // if (rand === 1)
-    // {
-    //     return 'Rock';
-    // }
-    // else if (rand === 2)
-    // {
-    //     return 'Paper';
-    // }
-    // else
-    // {
-    //     return 'Scissors';
-    // }
-//}
+     if (rand === 1)
+     {
+         return 'Rock';
+     }
+     else if (rand === 2)
+     {
+         return 'Paper';
+     }
+     else
+     {
+         return 'Scissors';
+     }
+}
 
 // function rockScissorCase(p, c)
 // {
@@ -125,7 +125,7 @@
 
 function game()
 {
-    //let round_result;
+    //Getting player selection
     let playerSelection;
 
     const playerChoices = document.querySelectorAll('button');
@@ -138,6 +138,11 @@ function game()
         });
     });
 
+    const computerChoice = getComputerChoice().toUpperCase();
+    console.log(`computer choice was ${computerChoice}`);
+
+
+    //let round_result;
     //let playerRoundsWon = 0;
     //let computerRoundsWon = 0;
 
@@ -186,6 +191,10 @@ function game()
     //             break;
     //         }
     //     }
+
+
+
+
     //     const computerSelection = getComputerChoice().toUpperCase();
 
     //     round_result = playRound(playerSelection, computerSelection);
