@@ -128,12 +128,12 @@ function game()
     //let round_result;
     let playerSelection;
 
-    const buttons = document.querySelectorAll('button');
+    const playerChoices = document.querySelectorAll('button');
 
-    buttons.forEach((button) => {
+    playerChoices.forEach((choice) => {
 
-        button.addEventListener('click', () => {
-            playerSelection = button.id;
+        choice.addEventListener('click', () => {
+            playerSelection = choice.id;
             console.log(`Player chose ${playerSelection}`);
         });
     });
