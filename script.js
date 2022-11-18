@@ -1,83 +1,83 @@
-function getComputerChoice()
-{
+//function getComputerChoice()
+//{
 
     //code that gives a random number between 1 and 3
-    let rand = Math.floor(Math.random() * 3) + 1;
+    //let rand = Math.floor(Math.random() * 3) + 1;
 
     //deciding whether to return 'Rock', 'Paper', or Scissors'
-    if (rand === 1)
-    {
-        return 'Rock';
-    }
-    else if (rand === 2)
-    {
-        return 'Paper';
-    }
-    else
-    {
-        return 'Scissors';
-    }
-}
+    // if (rand === 1)
+    // {
+    //     return 'Rock';
+    // }
+    // else if (rand === 2)
+    // {
+    //     return 'Paper';
+    // }
+    // else
+    // {
+    //     return 'Scissors';
+    // }
+//}
 
-function rockScissorCase(p, c)
-{
-    if (p === 'ROCK')
-    {
-        return 1;
-    }
-    else
-    {
-        return 2;
-    }
-}
+// function rockScissorCase(p, c)
+// {
+//     if (p === 'ROCK')
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return 2;
+//     }
+// }
 
-function scissorPaperCase(p, c)
-{
-    if (p === 'SCISSORS')
-    {
-        return 1;
-    }
-    else
-    {
-        return 2;
-    }
-}
+// function scissorPaperCase(p, c)
+// {
+//     if (p === 'SCISSORS')
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return 2;
+//     }
+// }
 
-function paperRockCase(p, c)
-{
-    if (p === 'PAPER')
-    {
-        return 1;
-    }
-    else
-    {
-        return 2;
-    }
-}
+// function paperRockCase(p, c)
+// {
+//     if (p === 'PAPER')
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return 2;
+//     }
+// }
 
-function playRound(playerSelection, computerSelection)
-{
-    let roundCase;
-    if (playerSelection === computerSelection)
-    {
-        return "It's a tie!, try again.";
-    }
+// function playRound(playerSelection, computerSelection)
+// {
+//     let roundCase;
+//     if (playerSelection === computerSelection)
+//     {
+//         return "It's a tie!, try again.";
+//     }
 
-    else if ((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (computerSelection === 'ROCK' && playerSelection === 'SCISSORS'))
-    {
-        roundCase = rockScissorCase(playerSelection, computerSelection);
-        return roundCase;
-    }
-    else if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') || (computerSelection === 'SCISSORS' && playerSelection == 'PAPER'))
-    {
-        roundCase = scissorPaperCase(playerSelection, computerSelection);
-        return roundCase;
-    }
-    else
-    {
-        roundCase = paperRockCase(playerSelection, computerSelection);
-        return roundCase;
-    }
+//     else if ((playerSelection === 'ROCK' && computerSelection === 'SCISSORS') || (computerSelection === 'ROCK' && playerSelection === 'SCISSORS'))
+//     {
+//         roundCase = rockScissorCase(playerSelection, computerSelection);
+//         return roundCase;
+//     }
+//     else if ((playerSelection === 'SCISSORS' && computerSelection === 'PAPER') || (computerSelection === 'SCISSORS' && playerSelection == 'PAPER'))
+//     {
+//         roundCase = scissorPaperCase(playerSelection, computerSelection);
+//         return roundCase;
+//     }
+//     else
+//     {
+//         roundCase = paperRockCase(playerSelection, computerSelection);
+//         return roundCase;
+//     }
     
 
     //if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS')
@@ -121,50 +121,88 @@ function playRound(playerSelection, computerSelection)
       //  return "Its a tie!, try again";
     //}
 
-}
+//}
 
 function game()
 {
-    let round_result;
+    //let round_result;
     let playerSelection;
 
-    let playerRoundsWon = 0;
-    let computerRoundsWon = 0;
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button) => {
+
+        button.addEventListener('click', () => {
+            console.log(button.id);
+        });
+    });
+
+    //let playerRoundsWon = 0;
+    //let computerRoundsWon = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //call playRound function five times, 5 round game
-    for (let i = 0; i < 5; i++)
-    {
-        //getting player and computer selection
+    // for (let i = 0; i < 5; i++)
+    // {
+    //     //getting player and computer selection
         
-        //let playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
-        while (true)
-        {
-            playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+    //     //let playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
+    //     while (true)
+    //     {
+    //         playerSelection = prompt("Rock, paper, or scissors?").toUpperCase();
 
-            if (playerSelection === 'ROCK' || playerSelection === 'PAPER' || playerSelection === 'SCISSORS')
-            {
-                break;
-            }
-        }
-        const computerSelection = getComputerChoice().toUpperCase();
+    //         if (playerSelection === 'ROCK' || playerSelection === 'PAPER' || playerSelection === 'SCISSORS')
+    //         {
+    //             break;
+    //         }
+    //     }
+    //     const computerSelection = getComputerChoice().toUpperCase();
 
-        round_result = playRound(playerSelection, computerSelection);
+    //     round_result = playRound(playerSelection, computerSelection);
 
-        if (round_result === 1)
-        {
-            playerRoundsWon++;
-            console.log(`You Win!, ${playerSelection.toLowerCase()} beats ${computerSelection.toLowerCase()}`);
-        }
-        else if (round_result === 2)
-        {
-            computerRoundsWon++;
-            console.log(`You lose... ${computerSelection.toLowerCase()} beats ${playerSelection.toLowerCase()}`);
-        }
-        else
-        {
-            console.log(round_result);
-        }
+    //     if (round_result === 1)
+    //     {
+    //         playerRoundsWon++;
+    //         console.log(`You Win!, ${playerSelection.toLowerCase()} beats ${computerSelection.toLowerCase()}`);
+    //     }
+    //     else if (round_result === 2)
+    //     {
+    //         computerRoundsWon++;
+    //         console.log(`You lose... ${computerSelection.toLowerCase()} beats ${playerSelection.toLowerCase()}`);
+    //     }
+        // else
+        // {
+        //     console.log(round_result);
+        // }
 
 
         //if (playerRoundsWon === 3)
@@ -176,20 +214,20 @@ function game()
             //break;
         //}
         
-    }
+    //}
 
-    if (playerRoundsWon > computerRoundsWon)
-    {
-        console.log("You won the game! Congratulations!");
-    } 
-    else if (playerRoundsWon === computerRoundsWon)
-    {
-        console.log("The result is a tie");
-    }
-    else
-    {
-        console.log("You lost the game...");
-    }
+    // if (playerRoundsWon > computerRoundsWon)
+    // {
+    //     console.log("You won the game! Congratulations!");
+    // } 
+    // else if (playerRoundsWon === computerRoundsWon)
+    // {
+    //     console.log("The result is a tie");
+    // }
+    // else
+    // {
+    //     console.log("You lost the game...");
+    // }
 
 }
 
