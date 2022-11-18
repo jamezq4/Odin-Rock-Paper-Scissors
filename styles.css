@@ -2,3 +2,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#play-round {
+    display: flex;
+    justify-content: center;
+}
