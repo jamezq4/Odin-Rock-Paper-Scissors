@@ -133,7 +133,8 @@ function game()
     buttons.forEach((button) => {
 
         button.addEventListener('click', () => {
-            console.log(button.id);
+            playerSelection = button.id;
+            console.log(`Player chose ${playerSelection}`);
         });
     });
 
