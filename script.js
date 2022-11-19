@@ -55,12 +55,11 @@ function getComputerChoice()
 //     }
 // }
 
- function playRound(e)
+ function playRound(playerSelec)
  {
     const computerChoice = getComputerChoice().toUpperCase();
-    console.log(e);
-    //console.log(`computer choice was ${computerChoice}`);
-    //console.log(`Player chose ${playerSelection}`);
+    console.log(`computer choice was ${computerChoice}`);
+    console.log(`Player chose ${playerSelec}`);
  }
 //     let roundCase;
 //     if (playerSelection === computerSelection)
@@ -131,7 +130,8 @@ function getComputerChoice()
 function game()
 {
     //Getting player selection
-    //let playerSelection;
+    let playerSelection;
+    let roundResult;
 
     //const playerChoices = document.querySelectorAll('button');
     const playerChoices = document.getElementsByClassName('choice');
@@ -141,12 +141,15 @@ function game()
 
         choice.addEventListener('click', () => {
             playerSelection = choice.id;
-            console.log(`Player chose ${playerSelection}`);
+            //console.log(`Player chose ${playerSelection}`);
         });
     });
 
     const roundButton = document.getElementById('play-round');
-    roundButton.addEventListener('click', playRound);
+    //('click', playRound)
+    roundButton.addEventListener('click', () => {
+        playRound(playerSelection);
+    });  //
     //playRound(playerSelection);
     //const computerChoice = getComputerChoice().toUpperCase();
     //console.log(`computer choice was ${computerChoice}`);
@@ -251,7 +254,7 @@ function game()
     // }
 
 }
-let playerSelection;
+//let playerSelection;
 
 game();
 
