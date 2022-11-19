@@ -58,7 +58,8 @@ function getComputerChoice()
  function playRound(e)
  {
     const computerChoice = getComputerChoice().toUpperCase();
-    console.log(`computer choice was ${computerChoice}`);
+    console.log(e);
+    //console.log(`computer choice was ${computerChoice}`);
     //console.log(`Player chose ${playerSelection}`);
  }
 //     let roundCase;
@@ -130,15 +131,17 @@ function getComputerChoice()
 function game()
 {
     //Getting player selection
-    let playerSelection;
+    //let playerSelection;
 
-    const playerChoices = document.querySelectorAll('button');
+    //const playerChoices = document.querySelectorAll('button');
+    const playerChoices = document.getElementsByClassName('choice');
+    let playerChoiceArray = Array.from(playerChoices);
 
-    playerChoices.forEach((choice) => {
+    playerChoiceArray.forEach((choice) => {
 
         choice.addEventListener('click', () => {
             playerSelection = choice.id;
-            //console.log(`Player chose ${playerSelection}`);
+            console.log(`Player chose ${playerSelection}`);
         });
     });
 
@@ -248,6 +251,7 @@ function game()
     // }
 
 }
+let playerSelection;
 
 game();
 
