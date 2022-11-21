@@ -59,19 +59,19 @@ function getComputerChoice()
  {
     //playerSelec.toUpperCase();
     const computerChoice = getComputerChoice().toUpperCase();
-    console.log(`computer choice was ${computerChoice}`);
-    console.log(`Player chose ${playerSelec}`);
+    //console.log(`computer choice was ${computerChoice}`);
+    //console.log(`Player chose ${playerSelec}`);
 
-    //let roundCase;
+    let roundCase;
 
-    //if (playerSelec === computerChoice)
-    //{
-      //return "It's a tie!, try again.";
-   // }
-    //else
-    //{
-      //return "Nah";
-   // }
+    if (playerSelec === computerChoice)
+    {
+      return "It's a tie!, try again.";
+    }
+    else
+    {
+      return "Nah";
+    }
  }
 //     let roundCase;
 //     if (playerSelection === computerSelection)
@@ -160,7 +160,8 @@ function game()
     const roundButton = document.getElementById('play-round');
     //('click', playRound)
     roundButton.addEventListener('click', () => {
-        playRound(playerSelection.toUpperCase());
+        roundResult = playRound(playerSelection.toUpperCase());
+        console.log(roundResult);
     });  //
     //playRound(playerSelection);
     //const computerChoice = getComputerChoice().toUpperCase();
