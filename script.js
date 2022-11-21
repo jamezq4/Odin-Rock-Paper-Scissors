@@ -59,6 +59,10 @@ function getComputerChoice()
  {
     //playerSelec.toUpperCase();
     const computerChoice = getComputerChoice().toUpperCase();
+    const computerDisplaySelec = document.getElementById('computer-selec');
+
+    computerDisplaySelec.textContent = '';
+    computerDisplaySelec.textContent += computerChoice;
     //console.log(`computer choice was ${computerChoice}`);
     //console.log(`Player chose ${playerSelec}`);
 
