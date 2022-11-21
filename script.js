@@ -19,17 +19,17 @@ function getComputerChoice()
      }
 }
 
-// function rockScissorCase(p, c)
-// {
-//     if (p === 'ROCK')
-//     {
-//         return 1;
-//     }
-//     else
-//     {
-//         return 2;
-//     }
-// }
+ function rockScissorCase(p, c)
+ {
+     if (p === 'ROCK')
+     {
+         return 1;
+     }
+     else
+     {
+         return 2;
+     }
+ }
 
 // function scissorPaperCase(p, c)
 // {
@@ -77,6 +77,11 @@ function getComputerChoice()
     if (playerSelec === computerChoice)
     {
       return "It's a tie!, try again.";
+    }
+    else if ((playerSelec === 'ROCK' && computerChoice === 'SCISSORS') || (computerChoice === 'ROCK' && playerSelec === 'SCISSORS'))
+    {
+      roundCase = rockScissorCase(playerSelec, computerChoice);
+      return roundCase;
     }
     else
     {
@@ -177,10 +182,14 @@ function game()
     });
 
     const roundButton = document.getElementById('play-round');
+    const output = document.getElementById('output');
     //('click', playRound)
     roundButton.addEventListener('click', () => {
         roundResult = playRound(playerSelection.toUpperCase());
-        console.log(roundResult);
+        output.textContent = '';
+        output.textContent += roundResult;
+        setTimeout(function(){output.textContent = ''}, 3000);
+        //console.log(roundResult);
     });  //
     //playRound(playerSelection);
     //const computerChoice = getComputerChoice().toUpperCase();
