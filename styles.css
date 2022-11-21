@@ -3,6 +3,11 @@ body {
     flex-direction: column;
 }
 
+.selections {
+    display: flex;
+    gap: 10px;
+}
+
 #play-round {
     display: flex;
     justify-content: center;
