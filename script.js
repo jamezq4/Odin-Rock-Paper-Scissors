@@ -63,8 +63,12 @@ function getComputerChoice()
 
     computerDisplaySelec.textContent = '';
     computerDisplaySelec.textContent += computerChoice;
+    setTimeout(function(){computerDisplaySelec.textContent = ''}, 3000);
+    //computerDisplaySelec.textContent += computerChoice;
     //console.log(`computer choice was ${computerChoice}`);
     //console.log(`Player chose ${playerSelec}`);
+
+
 
     let roundCase;
 
