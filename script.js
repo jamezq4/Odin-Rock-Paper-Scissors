@@ -60,10 +60,12 @@ function getComputerChoice()
     //playerSelec.toUpperCase();
     const computerChoice = getComputerChoice().toUpperCase();
     const computerDisplaySelec = document.getElementById('computer-selec');
+    const playerChoiceDisp = document.getElementById('player-selec');
 
     computerDisplaySelec.textContent = '';
     computerDisplaySelec.textContent += computerChoice;
-    setTimeout(function(){computerDisplaySelec.textContent = ''}, 3000);
+    setTimeout(function(){playerChoiceDisp.textContent = '?'}, 3000);
+    setTimeout(function(){computerDisplaySelec.textContent = '?'}, 3000);
     //computerDisplaySelec.textContent += computerChoice;
     //console.log(`computer choice was ${computerChoice}`);
     //console.log(`Player chose ${playerSelec}`);
