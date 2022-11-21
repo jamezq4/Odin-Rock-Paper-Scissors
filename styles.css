@@ -13,6 +13,11 @@ body {
     gap: 10px;
 }
 
+.selection-labels {
+    display: flex;
+    gap: 10px;
+}
+
 .selections {
     display: flex;
     gap: 10px;
