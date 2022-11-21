@@ -155,6 +155,9 @@ function game()
     let playerSelection;
     let roundResult;
 
+    let playerRoundsWon = 0;
+    let computerRoundsWon = 0;
+
     //const playerChoices = document.querySelectorAll('button');
     const playerChoices = document.getElementsByClassName('choice');
     let playerChoiceArray = Array.from(playerChoices);
