@@ -149,10 +149,16 @@ function game()
     const playerChoices = document.getElementsByClassName('choice');
     let playerChoiceArray = Array.from(playerChoices);
 
+    const displayPlayerSelec = document.getElementById('player-selec');
+
+
     playerChoiceArray.forEach((choice) => {
 
         choice.addEventListener('click', () => {
             playerSelection = choice.id;
+            displayPlayerSelec.textContent = '';
+            displayPlayerSelec.textContent += playerSelection;
+
             //console.log(`Player chose ${playerSelection}`);
         });
     });
