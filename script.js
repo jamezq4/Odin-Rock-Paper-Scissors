@@ -55,10 +55,11 @@ function getComputerChoice()
      }
  }
 
- function playRound(playerSelec)
+ function playRound(playerSelec, computerChoice)
  {
     //playerSelec.toUpperCase();
-    const computerChoice = getComputerChoice().toUpperCase();
+    //const computerChoice = getComputerChoice().toUpperCase();
+    //computerChoice = getComputerChoice().toUpperCase();
     const computerDisplaySelec = document.getElementById('computer-selec');
     const playerChoiceDisp = document.getElementById('player-selec');
 
@@ -164,6 +165,7 @@ function game()
 {
     //Getting player selection
     let playerSelection;
+    let computerSelection;
     let roundResult;
 
     let playerRoundsWon = 0;
@@ -191,11 +193,24 @@ function game()
     const output = document.getElementById('output');
     //('click', playRound)
     roundButton.addEventListener('click', () => {
-        roundResult = playRound(playerSelection.toUpperCase());
+        computerSelection = getComputerChoice().toUpperCase();
+        roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
         output.textContent = '';
         output.textContent += roundResult;
         setTimeout(function(){output.textContent = ''}, 3000);
-        //console.log(roundResult);
+
+        //if (roundResult === 1)
+        //{
+         // playerRoundsWon++;
+         // output.textContent = '';
+          //output.textContent += `You win! ${playerSelection}`
+       // }
+
+
+        //output.textContent = '';
+        //output.textContent += roundResult;
+        //setTimeout(function(){output.textContent = ''}, 3000);
+        
     });  //
     //playRound(playerSelection);
     //const computerChoice = getComputerChoice().toUpperCase();
@@ -302,6 +317,5 @@ function game()
 
 }
 //let playerSelection;
-
 game();
 
