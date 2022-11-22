@@ -43,17 +43,17 @@ function getComputerChoice()
      }
  }
 
-// function paperRockCase(p, c)
-// {
-//     if (p === 'PAPER')
-//     {
-//         return 1;
-//     }
-//     else
-//     {
-//         return 2;
-//     }
-// }
+ function paperRockCase(p, c)
+ {
+     if (p === 'PAPER')
+     {
+         return 1;
+     }
+     else
+     {
+         return 2;
+     }
+ }
 
  function playRound(playerSelec)
  {
@@ -90,7 +90,8 @@ function getComputerChoice()
     }
     else
     {
-      return "Nah";
+      roundCase = paperRockCase(playerSelec, computerChoice);
+      return roundCase
     }
  }
 //     let roundCase;
