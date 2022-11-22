@@ -195,16 +195,23 @@ function game()
     roundButton.addEventListener('click', () => {
         computerSelection = getComputerChoice().toUpperCase();
         roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
-        output.textContent = '';
-        output.textContent += roundResult;
-        setTimeout(function(){output.textContent = ''}, 3000);
+        //output.textContent = '';
+        //output.textContent += roundResult;
+        //setTimeout(function(){output.textContent = ''}, 3000);
 
-        //if (roundResult === 1)
-        //{
-         // playerRoundsWon++;
-         // output.textContent = '';
-          //output.textContent += `You win! ${playerSelection}`
-       // }
+        if (roundResult === 1)
+        {
+          playerRoundsWon++;
+          output.textContent = '';
+          output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
+        }
+        else
+        {
+          output.textContent = '';
+          output.textContent += roundResult;
+        }
+        console.log(playerRoundsWon);
+        setTimeout(function(){output.textContent = ''}, 3000);
 
 
         //output.textContent = '';
