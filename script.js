@@ -205,12 +205,18 @@ function game()
           output.textContent = '';
           output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
         }
+        else if (roundResult === 2)
+        {
+          computerRoundsWon++;
+          output.textContent = ''
+          output.textContent += `You lose... ${computerSelection} beats ${playerSelection}`;
+        }
         else
         {
           output.textContent = '';
           output.textContent += roundResult;
         }
-        console.log(playerRoundsWon);
+        console.log(computerRoundsWon);
         setTimeout(function(){output.textContent = ''}, 3000);
 
 
