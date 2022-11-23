@@ -198,22 +198,21 @@ function game()
     const computerScoreDisplay = document.getElementById('computer-score');
 
     //('click', playRound)
+    
     roundButton.addEventListener('click', () => {
         //if player or computer hasnt reached  5 rounds yet, then perform the logic
-
+        
+        
         computerSelection = getComputerChoice().toUpperCase();
         roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
-        //output.textContent = '';
-        //output.textContent += roundResult;
-        //setTimeout(function(){output.textContent = ''}, 3000);
-
+          
         if (roundResult === 1)
         {
-
+  
           playerRoundsWon++;
           output.textContent = '';
           output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
-
+  
           playerScoreDisplay.textContent = '';
           playerScoreDisplay.textContent += playerRoundsWon;
         }
@@ -231,20 +230,62 @@ function game()
           output.textContent = '';
           output.textContent += roundResult;
         }
-        //console.log(computerRoundsWon);
+          //console.log(computerRoundsWon);
         setTimeout(function(){output.textContent = ''}, 3000);
+
+
+    
+    });
+
+    //if playerRoundsWon === 5 else if computerRoundsWon === 5
+    //{
+        //remove event listener from round button
+
+        //add an event listener to a "play again button"
+
+    //}
+        
+
+        //computerSelection = getComputerChoice().toUpperCase();
+        //roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
+        
+
+        //if (roundResult === 1)
+        //{
+
+          //playerRoundsWon++;
+          //output.textContent = '';
+          //output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
+
+          //playerScoreDisplay.textContent = '';
+          //playerScoreDisplay.textContent += playerRoundsWon;
+        //}
+        //else if (roundResult === 2)
+        //{
+          //computerRoundsWon++;
+          //output.textContent = ''
+          //output.textContent += `You lose... ${computerSelection} beats ${playerSelection}`;
+
+          //computerScoreDisplay.textContent = '';
+          //computerScoreDisplay.textContent += computerRoundsWon;
+       // }
+       // else
+        //{
+         // output.textContent = '';
+          //output.textContent += roundResult;
+        //}
+        //console.log(computerRoundsWon);
+        //setTimeout(function(){output.textContent = ''}, 3000);
 
 
         //output.textContent = '';
         //output.textContent += roundResult;
         //setTimeout(function(){output.textContent = ''}, 3000);
         
-    });  //
-    //playRound(playerSelection);
-    //const computerChoice = getComputerChoice().toUpperCase();
-    //console.log(`computer choice was ${computerChoice}`);
-    //THIS SHOULD BE IN A PLAY ROUND FUNCTION
-
+      //});
+      
+    //
+   
 
     //let round_result;
     //let playerRoundsWon = 0;
