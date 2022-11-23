@@ -192,6 +192,9 @@ function game()
 
     const roundButton = document.getElementById('play-round');
     const output = document.getElementById('output');
+
+    const computerScoreDisplay = document.getElementById('computer-score');
+
     //('click', playRound)
     roundButton.addEventListener('click', () => {
         computerSelection = getComputerChoice().toUpperCase();
@@ -214,6 +217,9 @@ function game()
           computerRoundsWon++;
           output.textContent = ''
           output.textContent += `You lose... ${computerSelection} beats ${playerSelection}`;
+
+          computerScoreDisplay.textContent = '';
+          computerScoreDisplay.textContent += computerRoundsWon;
         }
         else
         {
