@@ -55,46 +55,65 @@ function getComputerChoice()
      }
  }
 
- function playRound(playerSelec, computerChoice)
+ function playRound(e) // params - (playerSelec, computerChoice)
  {
-    //playerSelec.toUpperCase();
-    //const computerChoice = getComputerChoice().toUpperCase();
-    //computerChoice = getComputerChoice().toUpperCase();
-    const computerDisplaySelec = document.getElementById('computer-selec');
-    const playerChoiceDisp = document.getElementById('player-selec');
+    let playerChoice = e.target;
+    console.log(playerChoice);
 
-    computerDisplaySelec.textContent = '';
-    computerDisplaySelec.textContent += computerChoice;
-    setTimeout(function(){playerChoiceDisp.textContent = '?'}, 3000);
-    setTimeout(function(){computerDisplaySelec.textContent = '?'}, 3000);
+  //WE can update the display-choice divs and score-display divs here, because we can just use DOM methods to get access to those divs
+
+
+
+
+
+
+
+
+
+    //const computerDisplaySelec = document.getElementById('computer-selec');
+    //const playerChoiceDisp = document.getElementById('player-selec');
+
+    //computerDisplaySelec.textContent = '';
+    //computerDisplaySelec.textContent += computerChoice;
+    //setTimeout(function(){playerChoiceDisp.textContent = '?'}, 3000);
+    //setTimeout(function(){computerDisplaySelec.textContent = '?'}, 3000);
     //computerDisplaySelec.textContent += computerChoice;
     //console.log(`computer choice was ${computerChoice}`);
     //console.log(`Player chose ${playerSelec}`);
 
 
 
-    let roundCase;
+    //let roundCase;
 
-    if (playerSelec === computerChoice)
-    {
-      return "It's a tie!, try again.";
-    }
-    else if ((playerSelec === 'ROCK' && computerChoice === 'SCISSORS') || (computerChoice === 'ROCK' && playerSelec === 'SCISSORS'))
-    {
-      roundCase = rockScissorCase(playerSelec, computerChoice);
-      return roundCase;
-    }
-    else if ((playerSelec === 'SCISSORS' && computerChoice === 'PAPER') || (computerChoice === 'SCISSORS' && playerSelec === 'PAPER'))
-    {
-      roundCase = scissorPaperCase(playerSelec, computerChoice);
-      return roundCase;
-    }
-    else
-    {
-      roundCase = paperRockCase(playerSelec, computerChoice);
-      return roundCase
-    }
+    //if (playerSelec === computerChoice)
+    //{
+      //return "It's a tie!, try again.";
+   // }
+   // else if ((playerSelec === 'ROCK' && computerChoice === 'SCISSORS') || (computerChoice === 'ROCK' && playerSelec === 'SCISSORS'))
+    //{
+      //roundCase = rockScissorCase(playerSelec, computerChoice);
+      //return roundCase;
+   // }
+    //else if ((playerSelec === 'SCISSORS' && computerChoice === 'PAPER') || (computerChoice === 'SCISSORS' && playerSelec === 'PAPER'))
+    //{
+      //roundCase = scissorPaperCase(playerSelec, computerChoice);
+      //return roundCase;
+    //}
+    //else
+    //{
+      //roundCase = paperRockCase(playerSelec, computerChoice);
+      //return roundCase
+    //}
  }
+
+
+
+
+
+
+
+
+
 //     let roundCase;
 //     if (playerSelection === computerSelection)
 //     {
@@ -181,61 +200,63 @@ function game()
 
     playerChoiceArray.forEach((choice) => {
 
-        choice.addEventListener('click', () => {
+      choice.addEventListener('click', playRound);
+
+        //choice.addEventListener('click', () => {
           //if player or computer hasnt reached 5 rounds yet
 
-            playerSelection = choice.id;
-            displayPlayerSelec.textContent = '';
-            displayPlayerSelec.textContent += playerSelection;
+            //playerSelection = choice.id;
+            //displayPlayerSelec.textContent = '';
+            //displayPlayerSelec.textContent += playerSelection;
 
             //console.log(`Player chose ${playerSelection}`);
-        });
+        //});
     });
 
-    const roundButton = document.getElementById('play-round');
-    const output = document.getElementById('output');
+    //const roundButton = document.getElementById('play-round');
+    //const output = document.getElementById('output');
 
-    const computerScoreDisplay = document.getElementById('computer-score');
+    //const computerScoreDisplay = document.getElementById('computer-score');
 
     //('click', playRound)
     
-    roundButton.addEventListener('click', () => {
+    //roundButton.addEventListener('click', () => {
         //if player or computer hasnt reached  5 rounds yet, then perform the logic
         
         
-        computerSelection = getComputerChoice().toUpperCase();
-        roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
+      //  computerSelection = getComputerChoice().toUpperCase();
+        //roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
           
-        if (roundResult === 1)
-        {
+        //if (roundResult === 1)
+        //{
   
-          playerRoundsWon++;
-          output.textContent = '';
-          output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
+          //playerRoundsWon++;
+          //output.textContent = '';
+          //output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
   
-          playerScoreDisplay.textContent = '';
-          playerScoreDisplay.textContent += playerRoundsWon;
-        }
-        else if (roundResult === 2)
-        {
-          computerRoundsWon++;
-          output.textContent = ''
-          output.textContent += `You lose... ${computerSelection} beats ${playerSelection}`;
+          //playerScoreDisplay.textContent = '';
+          //playerScoreDisplay.textContent += playerRoundsWon;
+        //}
+        //else if (roundResult === 2)
+        //{
+          //computerRoundsWon++;
+          //output.textContent = ''
+          //output.textContent += `You lose... ${computerSelection} beats ${playerSelection}`;
 
-          computerScoreDisplay.textContent = '';
-          computerScoreDisplay.textContent += computerRoundsWon;
-        }
-        else
-        {
-          output.textContent = '';
-          output.textContent += roundResult;
-        }
+          //computerScoreDisplay.textContent = '';
+          //computerScoreDisplay.textContent += computerRoundsWon;
+        //}
+        //else
+        //{
+         // output.textContent = '';
+          //output.textContent += roundResult;
+       // }
           //console.log(computerRoundsWon);
-        setTimeout(function(){output.textContent = ''}, 3000);
+        //setTimeout(function(){output.textContent = ''}, 3000);
 
 
     
-    });
+    //});
 
     //if playerRoundsWon === 5 else if computerRoundsWon === 5
     //{
@@ -245,6 +266,21 @@ function game()
 
     //}
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //computerSelection = getComputerChoice().toUpperCase();
         //roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
