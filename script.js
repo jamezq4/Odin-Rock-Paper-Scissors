@@ -182,6 +182,8 @@ function game()
     playerChoiceArray.forEach((choice) => {
 
         choice.addEventListener('click', () => {
+          //if player or computer hasnt reached 5 rounds yet
+
             playerSelection = choice.id;
             displayPlayerSelec.textContent = '';
             displayPlayerSelec.textContent += playerSelection;
@@ -197,6 +199,8 @@ function game()
 
     //('click', playRound)
     roundButton.addEventListener('click', () => {
+        //if player or computer hasnt reached  5 rounds yet, then perform the logic
+
         computerSelection = getComputerChoice().toUpperCase();
         roundResult = playRound(playerSelection.toUpperCase(), computerSelection);
         //output.textContent = '';
@@ -205,6 +209,7 @@ function game()
 
         if (roundResult === 1)
         {
+
           playerRoundsWon++;
           output.textContent = '';
           output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
