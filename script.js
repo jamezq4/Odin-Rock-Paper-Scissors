@@ -170,6 +170,7 @@ function game()
 
     let playerRoundsWon = 0;
     let computerRoundsWon = 0;
+    const playerScoreDisplay = document.getElementById('player-score');
 
     //const playerChoices = document.querySelectorAll('button');
     const playerChoices = document.getElementsByClassName('choice');
@@ -204,6 +205,9 @@ function game()
           playerRoundsWon++;
           output.textContent = '';
           output.textContent += `You win! ${playerSelection} beats ${computerSelection}`;
+
+          playerScoreDisplay.textContent = '';
+          playerScoreDisplay.textContent += playerRoundsWon;
         }
         else if (roundResult === 2)
         {
@@ -216,7 +220,7 @@ function game()
           output.textContent = '';
           output.textContent += roundResult;
         }
-        console.log(computerRoundsWon);
+        //console.log(computerRoundsWon);
         setTimeout(function(){output.textContent = ''}, 3000);
 
 
