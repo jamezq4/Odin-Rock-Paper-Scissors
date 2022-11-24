@@ -57,8 +57,26 @@ function getComputerChoice()
 
  function playRound(e) // params - (playerSelec, computerChoice)
  {
-    let playerChoice = e.target;
-    console.log(playerChoice);
+    if (playerRoundsWon === 2)
+    {
+      e.target.removeEventListener('click', playRound);
+    }
+    else if (computerRoundsWon === 2)
+    {
+      e.target.removeEventListener('click', playRound);
+    }
+    else
+    {
+      let playerChoice = e.target.id.toUpperCase();
+      playerRoundsWon++;
+      console.log(playerRoundsWon);
+    }
+
+
+
+    //let playerChoice = e.target.id.toUpperCase();
+    //playerRoundsWon++;
+    //console.log(playerRoundsWon);
 
   //WE can update the display-choice divs and score-display divs here, because we can just use DOM methods to get access to those divs
 
@@ -187,9 +205,9 @@ function game()
     let computerSelection;
     let roundResult;
 
-    let playerRoundsWon = 0;
-    let computerRoundsWon = 0;
-    const playerScoreDisplay = document.getElementById('player-score');
+    //let playerRoundsWon = 0;
+    //let computerRoundsWon = 0;
+    const playerScoreDisplay = document.getElementById('player-score', playerScore = 0);
 
     //const playerChoices = document.querySelectorAll('button');
     const playerChoices = document.getElementsByClassName('choice');
@@ -201,17 +219,8 @@ function game()
     playerChoiceArray.forEach((choice) => {
 
       choice.addEventListener('click', playRound);
-
-        //choice.addEventListener('click', () => {
-          //if player or computer hasnt reached 5 rounds yet
-
-            //playerSelection = choice.id;
-            //displayPlayerSelec.textContent = '';
-            //displayPlayerSelec.textContent += playerSelection;
-
-            //console.log(`Player chose ${playerSelection}`);
-        //});
     });
+    
 
     //const roundButton = document.getElementById('play-round');
     //const output = document.getElementById('output');
@@ -422,5 +431,7 @@ function game()
 
 }
 //let playerSelection;
+let playerRoundsWon = 0;
+let computerRoundsWon = 0;
 game();
 
