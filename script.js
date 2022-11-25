@@ -67,9 +67,13 @@ function getComputerChoice()
     }
     else
     {
+
+      
       let playerChoice = e.target.id.toUpperCase();
-      playerRoundsWon++;
-      console.log(playerRoundsWon);
+      const computerChoice = getComputerChoice().toUpperCase();
+      console.log(computerChoice);
+      //playerRoundsWon++;
+      //console.log(playerRoundsWon);
     }
 
 
