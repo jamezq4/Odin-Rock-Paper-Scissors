@@ -57,11 +57,11 @@ function getComputerChoice()
 
  function playRound(e) // params - (playerSelec, computerChoice)
  {
-    if (playerRoundsWon === 2)
+    if (playerRoundsWon === 5)
     {
       e.target.removeEventListener('click', playRound);
     }
-    else if (computerRoundsWon === 2)
+    else if (computerRoundsWon === 5)
     {
       e.target.removeEventListener('click', playRound);
     }
