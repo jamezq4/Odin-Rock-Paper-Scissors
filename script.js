@@ -98,6 +98,12 @@ function getComputerChoice()
             playerScoreDisplay.textContent = playerRoundsWon;
             output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
           }
+          else
+          {
+            computerRoundsWon++;
+            computerScoreDisplay.textContent = computerRoundsWon;
+            output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+          }
       }
 
       //Everything goes to default at the end of a round
