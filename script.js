@@ -68,10 +68,15 @@ function getComputerChoice()
     else
     {
 
-      
+      const playerChoiceDisplay = document.getElementById('player-selec');
+      const computerChoiceDisplay = document.getElementById('computer-selec');
+
       let playerChoice = e.target.id.toUpperCase();
       const computerChoice = getComputerChoice().toUpperCase();
-      console.log(computerChoice);
+
+      playerChoiceDisplay.textContent = playerChoice;
+      computerChoiceDisplay.textContent = computerChoice;
+      
       //playerRoundsWon++;
       //console.log(playerRoundsWon);
     }
