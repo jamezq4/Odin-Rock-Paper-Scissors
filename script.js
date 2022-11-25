@@ -105,6 +105,23 @@ function getComputerChoice()
             output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
           }
       }
+      else if ((playerChoice === 'SCISSORS' && computerChoice === 'PAPER') || (computerChoice === 'SCISSORS' && playerChoice === 'PAPER'))
+      {
+        roundCase = scissorPaperCase(playerChoice, computerChoice);
+
+        if (roundCase === 1)
+        {
+          playerRoundsWon++;
+          playerScoreDisplay.textContent = playerRoundsWon;
+          output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+        }
+        else
+        {
+          computerRoundsWon++;
+          computerScoreDisplay.textContent = computerRoundsWon;
+          output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+        }
+      }
 
       //Everything goes to default at the end of a round
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
