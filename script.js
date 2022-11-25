@@ -122,6 +122,23 @@ function getComputerChoice()
           output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
         }
       }
+      else
+      {
+        roundCase = paperRockCase(playerChoice, computerChoice);
+
+        if (roundCase === 1)
+        {
+          playerRoundsWon++;
+          playerScoreDisplay.textContent = playerRoundsWon;
+          output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+        }
+        else
+        {
+          computerRoundsWon++;
+          computerScoreDisplay.textContent = computerRoundsWon;
+          output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+        }
+      }
 
       //Everything goes to default at the end of a round
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
