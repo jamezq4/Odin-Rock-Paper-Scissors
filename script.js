@@ -144,6 +144,13 @@ function getComputerChoice()
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
       setTimeout(function(){computerChoiceDisplay.textContent = '?'}, 3000);
       setTimeout(function(){output.textContent = ''}, 3000);
+
+      if (playerRoundsWon === 5 || computerRoundsWon === 5)
+      {
+        const playAgainButton = document.createElement("button");
+        playAgainButton.innerText = 'Play Again?';
+        document.body.appendChild(playAgainButton);
+      }
       
       //playerRoundsWon++;
       //console.log(playerRoundsWon);
@@ -284,7 +291,7 @@ function game()
 
     //let playerRoundsWon = 0;
     //let computerRoundsWon = 0;
-    const playerScoreDisplay = document.getElementById('player-score', playerScore = 0);
+    const playerScoreDisplay = document.getElementById('player-score');
 
     //const playerChoices = document.querySelectorAll('button');
     const playerChoices = document.getElementsByClassName('choice');
@@ -297,6 +304,13 @@ function game()
 
       choice.addEventListener('click', playRound);
     });
+
+    
+    
+    //const playAgainButton = document.createElement("button");
+    //playAgainButton.innerText = 'Play Again?';
+    //document.body.appendChild(playAgainButton);
+    
     
 
     //const roundButton = document.getElementById('play-round');
