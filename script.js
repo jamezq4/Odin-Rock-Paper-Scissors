@@ -76,6 +76,9 @@ function getComputerChoice()
 
       playerChoiceDisplay.textContent = playerChoice;
       computerChoiceDisplay.textContent = computerChoice;
+
+      setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
+      setTimeout(function(){computerChoiceDisplay.textContent = '?'}, 3000);
       
       //playerRoundsWon++;
       //console.log(playerRoundsWon);
