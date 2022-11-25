@@ -71,14 +71,39 @@ function getComputerChoice()
       const playerChoiceDisplay = document.getElementById('player-selec');
       const computerChoiceDisplay = document.getElementById('computer-selec');
 
+      const output = document.getElementById('output');
+
       let playerChoice = e.target.id.toUpperCase();
       const computerChoice = getComputerChoice().toUpperCase();
 
       playerChoiceDisplay.textContent = playerChoice;
       computerChoiceDisplay.textContent = computerChoice;
 
+      const playerScoreDisplay = document.getElementById('player-score');
+      const computerScoreDisplay = document.getElementById('computer-score');
+
+      let roundCase;
+
+      if (playerChoice === computerChoice)
+      {
+        output.textContent = "It's a tie! Try again.";
+      }
+      else if ((playerChoice === 'ROCK' && computerChoice === 'SCISSORS') || (computerChoice === 'ROCK' && playerChoice === 'SCISSORS'))
+      {
+          roundCase = rockScissorCase(playerChoice, computerChoice);
+
+          if (roundCase === 1)
+          {
+            playerRoundsWon++;
+            playerScoreDisplay.textContent = playerRoundsWon;
+            output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+          }
+      }
+
+      //Everything goes to default at the end of a round
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
       setTimeout(function(){computerChoiceDisplay.textContent = '?'}, 3000);
+      setTimeout(function(){output.textContent = ''}, 3000);
       
       //playerRoundsWon++;
       //console.log(playerRoundsWon);
