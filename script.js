@@ -75,6 +75,7 @@ function getComputerChoice()
     //console.log(`Computer score has been reset to ${computerRoundsWon}`);
 
     e.target.removeEventListener('click', rePlay);
+    e.target.remove();
  }
 
 
