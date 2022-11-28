@@ -148,6 +148,7 @@ function getComputerChoice()
       if (playerRoundsWon === 5 || computerRoundsWon === 5)
       {
         const playAgainButton = document.createElement("button");
+        playAgainButton.id = 'play-again';
         playAgainButton.innerText = 'Play Again?';
         document.body.appendChild(playAgainButton);
       }
@@ -304,6 +305,9 @@ function game()
 
       choice.addEventListener('click', playRound);
     });
+
+    const playAButton = document.getElementById('play-again');
+    console.log(playAButton.id);
 
     
     
