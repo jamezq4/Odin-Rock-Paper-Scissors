@@ -55,10 +55,21 @@ function getComputerChoice()
      }
  }
 
+
+
+
  function rePlay(e)
  {
-    console.log(e.target.id);
+    //console.log(e.target.id);
+    playerRoundsWon = 0;
+    //computerRoundsWon = 0;
+
+    console.log(`Player score has been reset to ${playerRoundsWon}`);
  }
+
+
+
+
 
  function playRound(e) // params - (playerSelec, computerChoice)
  {
