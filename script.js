@@ -62,9 +62,10 @@ function getComputerChoice()
  {
     //console.log(e.target.id);
     playerRoundsWon = 0;
-    //computerRoundsWon = 0;
+    computerRoundsWon = 0;
 
     console.log(`Player score has been reset to ${playerRoundsWon}`);
+    console.log(`Computer score has been reset to ${computerRoundsWon}`);
  }
 
 
