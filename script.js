@@ -64,8 +64,15 @@ function getComputerChoice()
     playerRoundsWon = 0;
     computerRoundsWon = 0;
 
-    console.log(`Player score has been reset to ${playerRoundsWon}`);
-    console.log(`Computer score has been reset to ${computerRoundsWon}`);
+    const playerScoreDisplay = document.getElementById('player-score');
+    const computerScoreDisplay = document.getElementById('computer-score');
+
+    playerScoreDisplay.textContent = playerRoundsWon;
+    computerScoreDisplay.textContent = computerRoundsWon;
+
+
+    //console.log(`Player score has been reset to ${playerRoundsWon}`);
+    //console.log(`Computer score has been reset to ${computerRoundsWon}`);
 
     e.target.removeEventListener('click', rePlay);
  }
