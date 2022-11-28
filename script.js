@@ -157,20 +157,47 @@ function getComputerChoice()
         {
           playerRoundsWon++;
           playerScoreDisplay.textContent = playerRoundsWon;
-          output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+          if (playerRoundsWon === 5)
+          {
+            output.textContent = 'You won the game!';
+          }
+          else
+          {
+            output.textContent = `You won the round! ${playerChoice} beats ${computerChoice}`;
+          }
+          //output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
         }
         else
         {
           computerRoundsWon++;
           computerScoreDisplay.textContent = computerRoundsWon;
-          output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+          if (computerRoundsWon === 5)
+          {
+            output.textContent = 'You lost the game...';
+          }
+          else
+          {
+            output.textContent = `You lost this round... ${computerChoice} beats ${playerChoice}`;
+          }
+          //output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
         }
       }
 
       //Everything goes to default at the end of a round
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
       setTimeout(function(){computerChoiceDisplay.textContent = '?'}, 3000);
-      setTimeout(function(){output.textContent = ''}, 3000);
+
+      if (playerRoundsWon != 5)
+      {
+        setTimeout(function(){output.textContent = ''}, 3000);
+      }
+      else if (computerRoundsWon != 5)
+      {
+        setTimeout(function(){output.textContent = ''}, 3000);
+      }
+        //setTimeout(function(){output.textContent = ''}, 3000);
+      
+      //setTimeout(function(){output.textContent = ''}, 3000);
 
       if (playerRoundsWon === 5 || computerRoundsWon === 5)
       {
