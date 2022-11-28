@@ -66,6 +66,8 @@ function getComputerChoice()
 
     console.log(`Player score has been reset to ${playerRoundsWon}`);
     console.log(`Computer score has been reset to ${computerRoundsWon}`);
+
+    e.target.removeEventListener('click', rePlay);
  }
 
 
