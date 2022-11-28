@@ -55,6 +55,11 @@ function getComputerChoice()
      }
  }
 
+ function rePlay(e)
+ {
+    console.log(e.target.id);
+ }
+
  function playRound(e) // params - (playerSelec, computerChoice)
  {
     if (playerRoundsWon === 5)
@@ -151,6 +156,8 @@ function getComputerChoice()
         playAgainButton.id = 'play-again';
         playAgainButton.innerText = 'Play Again?';
         document.body.appendChild(playAgainButton);
+
+        playAgainButton.addEventListener('click', rePlay);
       }
       
       //playerRoundsWon++;
@@ -306,8 +313,7 @@ function game()
       choice.addEventListener('click', playRound);
     });
 
-    const playAButton = document.getElementById('play-again');
-    console.log(playAButton.id);
+    
 
     
     
