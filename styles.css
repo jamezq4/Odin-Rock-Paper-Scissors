@@ -5,6 +5,10 @@ body {
 
 .score-labels{
     display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    font-size: 22px;
     gap: 10px;
 }
 
