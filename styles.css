@@ -52,6 +52,14 @@ body {
     margin-right: 360px;
 }
 
+#output {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 20px;
+    font-size: 24px;
+}
+
 #play-round {
     display: flex;
     justify-content: center;
