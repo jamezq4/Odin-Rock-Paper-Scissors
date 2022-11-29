@@ -114,6 +114,7 @@ function getComputerChoice()
       if (playerChoice === computerChoice)
       {
         output.textContent = "It's a tie! Try again.";
+        setTimeout(function(){output.textContent = ''}, 3000);
       }
       else if ((playerChoice === 'ROCK' && computerChoice === 'SCISSORS') || (computerChoice === 'ROCK' && playerChoice === 'SCISSORS'))
       {
@@ -123,13 +124,32 @@ function getComputerChoice()
           {
             playerRoundsWon++;
             playerScoreDisplay.textContent = playerRoundsWon;
-            output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+
+            if (playerRoundsWon === 5)
+            {
+              output.textContent = 'You won the game!';
+            }
+            else
+            {
+              output.textContent = `You Won this round ${playerChoice} beats ${computerChoice}`;
+              setTimeout(function(){output.textContent = ''}, 3000);
+            }
           }
           else
           {
             computerRoundsWon++;
             computerScoreDisplay.textContent = computerRoundsWon;
-            output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+
+            if (computerRoundsWon === 5)
+            {
+              output.textContent = 'You lost the game...';
+            }
+            else
+            {
+              output.textContent = `You lost this round... ${computerChoice} beats ${playerChoice}`;
+              setTimeout(function(){output.textContent = ''}, 3000);
+            }
+            //output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
           }
       }
       else if ((playerChoice === 'SCISSORS' && computerChoice === 'PAPER') || (computerChoice === 'SCISSORS' && playerChoice === 'PAPER'))
@@ -140,13 +160,33 @@ function getComputerChoice()
         {
           playerRoundsWon++;
           playerScoreDisplay.textContent = playerRoundsWon;
-          output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
+
+          if (playerRoundsWon === 5)
+          {
+            output.textContent = 'You Won the game!';
+          }
+          else
+          {
+            output.textContent = `You Won this round... ${playerChoice} beats ${computerChoice}`;
+            setTimeout(function(){output.textContent = ''}, 3000);
+          }
+          //output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
         }
         else
         {
           computerRoundsWon++;
           computerScoreDisplay.textContent = computerRoundsWon;
-          output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
+
+          if (computerRoundsWon === 5)
+          {
+            output.textContent = 'You lost the game...';
+          }
+          else
+          {
+            output.textContent = `You lost this round... ${computerChoice} beats ${playerChoice}`;
+            setTimeout(function(){output.textContent = ''}, 3000);
+          }
+          //output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
         }
       }
       else
@@ -164,6 +204,7 @@ function getComputerChoice()
           else
           {
             output.textContent = `You won the round! ${playerChoice} beats ${computerChoice}`;
+            setTimeout(function(){output.textContent = ''}, 3000);
           }
           //output.textContent = `You win! ${playerChoice} beats ${computerChoice}`;
         }
@@ -178,6 +219,7 @@ function getComputerChoice()
           else
           {
             output.textContent = `You lost this round... ${computerChoice} beats ${playerChoice}`;
+            setTimeout(function(){output.textContent = ''}, 3000);
           }
           //output.textContent = `You lose... ${computerChoice} beats ${playerChoice}`;
         }
@@ -187,14 +229,14 @@ function getComputerChoice()
       setTimeout(function(){playerChoiceDisplay.textContent = '?'}, 3000);
       setTimeout(function(){computerChoiceDisplay.textContent = '?'}, 3000);
 
-      if (playerRoundsWon != 5)
-      {
-        setTimeout(function(){output.textContent = ''}, 3000);
-      }
-      else if (computerRoundsWon != 5)
-      {
-        setTimeout(function(){output.textContent = ''}, 3000);
-      }
+      //if (playerRoundsWon != 5)
+      //{
+        //setTimeout(function(){output.textContent = ''}, 3000);
+      //}
+      //else if (computerRoundsWon != 5)
+      //{
+        //setTimeout(function(){output.textContent = ''}, 3000);
+     // }
         //setTimeout(function(){output.textContent = ''}, 3000);
       
       //setTimeout(function(){output.textContent = ''}, 3000);
