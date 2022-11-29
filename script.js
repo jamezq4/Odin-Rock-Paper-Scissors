@@ -70,6 +70,9 @@ function getComputerChoice()
     playerScoreDisplay.textContent = playerRoundsWon;
     computerScoreDisplay.textContent = computerRoundsWon;
 
+    const output = document.getElementById('output');
+    output.textContent = 'Who will win?';
+
 
     //console.log(`Player score has been reset to ${playerRoundsWon}`);
     //console.log(`Computer score has been reset to ${computerRoundsWon}`);
