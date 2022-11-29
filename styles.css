@@ -73,7 +73,10 @@ button {
     border-radius: 10px;
 }
 
-#play-round {
+#play-again {
     display: flex;
     justify-content: center;
+    align-self: center;
+    margin: 30px;
+
 }
