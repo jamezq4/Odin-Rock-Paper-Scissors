@@ -18,7 +18,13 @@ body {
 
 .scores {
     display: flex;
+    justify-content: center;
+    font-size: 30px;
     gap: 10px;
+}
+
+#player-score {
+    margin-right: 220px;
 }
 
 .selection-labels {
