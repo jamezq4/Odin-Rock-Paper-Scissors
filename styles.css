@@ -60,6 +60,19 @@ body {
     font-size: 24px;
 }
 
+.player-choices {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+button {
+    padding: 8px 24px;
+    font-size: 22px;
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+}
+
 #play-round {
     display: flex;
     justify-content: center;
