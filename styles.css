@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Aldrich', sans-serif;
 }
 
 .score-labels {
@@ -71,6 +74,7 @@ button {
     font-size: 22px;
     border: 2px solid #3882F6;
     border-radius: 10px;
+    font: 24px 'Aldrich', sans-serif;
 }
 
 #play-again {
