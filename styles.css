@@ -10,9 +10,11 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin: 10px;
+    margin-bottom: 10px;
     font-size: 22px;
     gap: 10px;
+    background-color: #1F2937;
+    color: #F9FAF8;
 }
 
 .player-score-label {
