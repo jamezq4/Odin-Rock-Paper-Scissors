@@ -91,7 +91,7 @@ button {
     height: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-color: #cccccc;
 }
 
