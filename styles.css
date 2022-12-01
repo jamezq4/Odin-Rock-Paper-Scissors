@@ -6,6 +6,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Aldrich', sans-serif;
+    background: radial-gradient(#16222A, #3A6073);
 }
 
 .score-labels {
@@ -92,7 +93,6 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #cccccc;
 }
 
 #play-again {
